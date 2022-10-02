@@ -1,35 +1,45 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class AIScripts : MonoBehaviour
 {
-    public bool seek;
-
     public GameObject target;
-    
-    float freq = 0f;
+
+    public float freq = 0f;
+    public float turnSpeed = 0.0f;
+    public float movSpeed = 0.0f;
+    public float acceleration = 0.1f;
+    public float turnAcceleration = 0.1f;
+    public float maxSpeed = 10.0f;
+    public float maxTurnSpeed = 2.0f;
+
     Quaternion rotation;
     Vector3 movement;
-    float acceleration;
-    float turnSpeed = 1.0f;
-    float turnAcceleration = 0.2f;
-    float maxTurnSpeed = 1.0f;
-    float movSpeed = 3.0f;
-    float maxSpeed = 10.0f;
-    float stopDistance = 2.0f;
+
+    float stopDistance = 1.0f;
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) <
-        stopDistance) return;
-        Seek();   // calls to this function should be reduced
+
+        
+
+        freq += Time.deltaTime;
+        if (freq > 0.5)
+        {
+            freq -= 0.5f;
+            Seek();
+        }
+
         turnSpeed += turnAcceleration * Time.deltaTime;
         turnSpeed = Mathf.Min(turnSpeed, maxTurnSpeed);
+
         movSpeed += acceleration * Time.deltaTime;
         movSpeed = Mathf.Min(movSpeed, maxSpeed);
-        transform.rotation = Quaternion.Slerp(transform.rotation,
-                                              rotation, Time.deltaTime * turnSpeed);
-        transform.position += transform.forward.normalized * movSpeed *
-                              Time.deltaTime;
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnSpeed);
+        transform.position += transform.forward.normalized * movSpeed * Time.deltaTime;
+
     }
 
 
@@ -39,7 +49,7 @@ public class AIScripts : MonoBehaviour
         Vector3 direction = target.transform.position - transform.position;
         direction.y = 0f;
         movement = direction.normalized * acceleration;
-        float angle = Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
+        float angle = - Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
         rotation = Quaternion.AngleAxis(angle, Vector3.up);
     }
 }
