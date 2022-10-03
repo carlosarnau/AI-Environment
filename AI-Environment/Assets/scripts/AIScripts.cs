@@ -49,7 +49,7 @@ public class AIScripts : MonoBehaviour
         Vector3 direction = target.transform.position - transform.position;
         direction.y = 0f;
         movement = direction.normalized * acceleration;
-        float angle = - Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
+        float angle =  Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
         rotation = Quaternion.AngleAxis(angle, Vector3.up);
     }
 }
