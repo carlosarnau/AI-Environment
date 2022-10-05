@@ -1,11 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
+using System.IO;
 
 public class AIScripts : MonoBehaviour
 {
+    //Characters
+    public NavMeshAgent agent;
     public GameObject target;
 
+    //functions
+    public bool seek;
+
+    //Stats
     public float freq = 0f;
     public float turnSpeed = 0.0f;
     public float movSpeed = 0.0f;
@@ -13,32 +21,18 @@ public class AIScripts : MonoBehaviour
     public float turnAcceleration = 0.1f;
     public float maxSpeed = 10.0f;
     public float maxTurnSpeed = 2.0f;
-
     Quaternion rotation;
     Vector3 movement;
-
     float stopDistance = 1.0f;
+
+
     // Update is called once per frame
     void Update()
     {
 
+
+        if (seek) Seek();
         
-
-        freq += Time.deltaTime;
-        if (freq > 0.5)
-        {
-            freq -= 0.5f;
-            Seek();
-        }
-
-        turnSpeed += turnAcceleration * Time.deltaTime;
-        turnSpeed = Mathf.Min(turnSpeed, maxTurnSpeed);
-
-        movSpeed += acceleration * Time.deltaTime;
-        movSpeed = Mathf.Min(movSpeed, maxSpeed);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnSpeed);
-        transform.position += transform.forward.normalized * movSpeed * Time.deltaTime;
 
     }
 
@@ -46,10 +40,6 @@ public class AIScripts : MonoBehaviour
 
     void Seek()
     {
-        Vector3 direction = target.transform.position - transform.position;
-        direction.y = 0f;
-        movement = direction.normalized * acceleration;
-        float angle =  Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
-        rotation = Quaternion.AngleAxis(angle, Vector3.up);
+        agent.destination = target.transform.position;
     }
 }
