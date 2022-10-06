@@ -12,7 +12,10 @@ public class AIScripts : MonoBehaviour
 
     //functions
     public bool seek;
-
+    public bool hide;
+    public bool flee;
+    public bool wander;
+    public bool patrol;
     //Stats
     public float freq = 0f;
     public float turnSpeed = 0.0f;
