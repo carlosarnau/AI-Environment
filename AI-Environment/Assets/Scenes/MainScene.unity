@@ -1152,7 +1152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 996755093}
   target: {fileID: 1111874703}
-  seek: 1
+  seek: 0
+  wander: 1
+  hide: 0
+  patrol: 0
+  flee: 0
   freq: 0
   turnSpeed: 1
   movSpeed: 3

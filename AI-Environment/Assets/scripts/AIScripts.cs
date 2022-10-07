@@ -12,10 +12,11 @@ public class AIScripts : MonoBehaviour
 
     //functions
     public bool seek;
-    public bool hide;
-    public bool flee;
     public bool wander;
+    public bool hide;
     public bool patrol;
+    public bool flee;
+
     //Stats
     public float freq = 0f;
     public float turnSpeed = 0.0f;
@@ -33,16 +34,67 @@ public class AIScripts : MonoBehaviour
     void Update()
     {
 
-
-        if (seek) Seek();
-        
+        if (wander) Wander();
 
     }
 
 
-
     void Seek()
     {
+
         agent.destination = target.transform.position;
+
+    }
+
+
+    void Wander()
+    {
+       /*
+        float radius = 2f;
+        float offset = 3f;
+
+        Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
+        localTarget += new Vector3(0, 0, offset);
+        Vector3 worldTarget = transform.TransformPoint(localTarget);
+        worldTarget.y = 0f;
+
+        if (NavMesh.SamplePosition(worldTarget, out NavMeshHit hit, radius, NavMesh.AllAreas))
+        {
+            Seek(hit.position);
+        }
+        else
+        {
+            worldTarget = transform.TrasnformPoint(-localTarget);
+            worldTarget.y = 0f;
+            if (NavMesh.SamplePosition(worldTarget, out hit, radius, NavMesh.AllAreas))
+            {
+                Seek(hit.position);
+            }
+        }
+        */
+    }
+
+
+    void Hide()
+    {
+
+
+
+    }
+
+
+    void Patrol()
+    {
+
+
+
+    }
+
+
+    void Flee()
+    {
+
+
+
     }
 }
