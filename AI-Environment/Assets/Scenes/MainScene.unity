@@ -1164,6 +1164,7 @@ MonoBehaviour:
   turnAcceleration: 0.2
   maxSpeed: 10
   maxTurnSpeed: 1
+  minDistance: 20
 --- !u!195 &996755093
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1625,15 +1626,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1067794905582885678, guid: 90a267eb4b1d4484898bef5666071ba5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.7
+      value: 90.91
       objectReference: {fileID: 0}
     - target: {fileID: 1067794905582885678, guid: 90a267eb4b1d4484898bef5666071ba5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 1067794905582885678, guid: 90a267eb4b1d4484898bef5666071ba5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.3
+      value: 49.26
       objectReference: {fileID: 0}
     - target: {fileID: 1067794905582885678, guid: 90a267eb4b1d4484898bef5666071ba5, type: 3}
       propertyPath: m_LocalRotation.x

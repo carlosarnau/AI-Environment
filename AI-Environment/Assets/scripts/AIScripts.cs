@@ -26,11 +26,13 @@ public class AIScripts : MonoBehaviour
     public float turnAcceleration = 0.1f;
     public float maxSpeed = 10.0f;
     public float maxTurnSpeed = 2.0f;
+    public float minDistance = 20.0f;
     Quaternion rotation;
     Vector3 movement;
     float stopDistance = 1.0f;
     float radius = 10.0f;
     float offset = 10.0f;
+    
 
     void Start()
     {
@@ -43,21 +45,24 @@ public class AIScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float distance = Vector3.Distance(target.transform.position, transform.position);
+        if ((distance < minDistance))
+        {
+            //Vector3 targetDir = target.transform.position - transform.position;
+            //float lookAhead = targetDir.magnitude / agent.speed;
+            Seek(target.transform.position);
+           
+        }
 
-        if (wander)
+        else if (wander)
         {
             if (agent.remainingDistance < 10.0f )
             Wander();
         }
 
-        /*
-        if () 
-        {
-            Vector3 targetDir = target.transform.position - transform.position;
-            float lookAhead = targetDir.magnitude / agent.speed;
-            Seek(target.transform.position + target.transform.forward * lookAhead);
-        }
-        */
+
+       
+
 
     }
 
