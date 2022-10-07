@@ -1,8 +1,8 @@
 ## AI-Environment
 
 Scripts:
-- Seeking ✔
-- Navigation ✔
+- Seek ✔
 - Wander ✔
-- Hide ❌
-- Flocking ❌
+- Hide ✔
+- Patrol ❌
+- Flee ❌
