@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using System.IO;
 
+
 public class AIScripts : MonoBehaviour
 {
     //Characters
@@ -28,10 +29,10 @@ public class AIScripts : MonoBehaviour
     Quaternion rotation;
     Vector3 movement;
     float stopDistance = 1.0f;
+    float radius = 10.0f;
+    float offset = 10.0f;
 
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
 
         if (wander) Wander();
@@ -39,39 +40,47 @@ public class AIScripts : MonoBehaviour
     }
 
 
-    void Seek()
+    // Update is called once per frame
+    void Update()
     {
 
-        agent.destination = target.transform.position;
+        if (wander)
+        {
+            if (agent.remainingDistance < 10.0f )
+            Wander();
+        }
+
+        /*
+        if () 
+        {
+            Vector3 targetDir = target.transform.position - transform.position;
+            float lookAhead = targetDir.magnitude / agent.speed;
+            Seek(target.transform.position + target.transform.forward * lookAhead);
+        }
+        */
+
+    }
+
+
+    void Seek(Vector3 pos)
+    {
+
+        agent.destination = pos;
 
     }
 
 
     void Wander()
     {
-       /*
-        float radius = 2f;
-        float offset = 3f;
 
         Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
         localTarget += new Vector3(0, 0, offset);
+
         Vector3 worldTarget = transform.TransformPoint(localTarget);
         worldTarget.y = 0f;
 
-        if (NavMesh.SamplePosition(worldTarget, out NavMeshHit hit, radius, NavMesh.AllAreas))
-        {
-            Seek(hit.position);
-        }
-        else
-        {
-            worldTarget = transform.TrasnformPoint(-localTarget);
-            worldTarget.y = 0f;
-            if (NavMesh.SamplePosition(worldTarget, out hit, radius, NavMesh.AllAreas))
-            {
-                Seek(hit.position);
-            }
-        }
-        */
+        Seek(worldTarget);
+
     }
 
 
