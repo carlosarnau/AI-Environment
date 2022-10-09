@@ -10,6 +10,10 @@ public class FlockingManger : MonoBehaviour
     int numFish;
     GameObject flockFish;
     float spawnRadius;
+    public float minSpeed;
+    public float maxSpeed;
+    public float distanceNeighbour;
+    public float rotationSpeed;
     void Start()
     {
         allFish = new GameObject[numFish];
@@ -22,7 +26,7 @@ public class FlockingManger : MonoBehaviour
             allFish[i] = (GameObject)Instantiate(flockFish, pos,
                                 Quaternion.LookRotation(randomize));
             
-            //allFish[i].GetComponent<flockFish>().myManager = this;
+            allFish[i].GetComponent<FlockFish>().myManager = this;
         }
     }
 
