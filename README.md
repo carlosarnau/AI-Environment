@@ -5,4 +5,4 @@ Scripts:
 - Wander ✔
 - Hide ✔
 - Patrol ❌
-- Flee ❌
+- Flocking ❌
