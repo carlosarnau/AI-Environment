@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 4181184143497572}
   - component: {fileID: 95498490939354066}
   - component: {fileID: 7091721499442334866}
+  - component: {fileID: -2740959465462057563}
   m_Layer: 0
   m_Name: GreenFish
   m_TagString: Untagged
@@ -358,8 +359,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733855665772604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.325664, y: -2.541, z: -4.289312}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -4.2417, y: -2.9184, z: -4.3904}
+  m_LocalScale: {x: 9.031376, y: 9.031376, z: 9.031376}
   m_Children:
   - {fileID: 4657088553171376}
   - {fileID: 4293690398139348}
@@ -389,6 +390,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7091721499442334866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733855665772604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e8dd1edad69624cb17054bbb7c1a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2740959465462057563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
