@@ -4,35 +4,37 @@ using UnityEngine;
 
 public class FlockingManger : MonoBehaviour
 {
-    // Start is called before the first frame update
 
+    public GameObject fishPrefab;
+    public int numFish = 20;
     public GameObject[] allFish;
-    int numFish;
-    GameObject flockFish;
-    float spawnRadius;
-    public float minSpeed;
-    public float maxSpeed;
-    public float distanceNeighbour;
-    public float rotationSpeed;
+    public vecto3 swimLimits = new Vector3(5, 5, 5);
+
+    // Start is called before the first frame update
     void Start()
     {
+
         allFish = new GameObject[numFish];
-        for (int i = 0; i < numFish; ++i)
+        for (int i = 0; i < numFish; i++)
         {
-            Vector3 randomPosition = new Vector3(Random.Range(-spawnRadius, spawnRadius), 0, Random.Range(-spawnRadius, spawnRadius)); //Random Position (Circle)
-            Vector3 pos = this.transform.position + randomPosition; 
-            Vector3 randomize = new Vector3(Random.Range(0, 360), 0, Random.Range(0, 360)); // random vector direction
+
+            Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
+                                                                Random.Range(-swimLimits.y, swimLimits.y),
+                                                                Random.Range(-swimLimits.z, swimLimits.z));
             
-            allFish[i] = (GameObject)Instantiate(flockFish, pos,
-                                Quaternion.LookRotation(randomize));
-            
-            allFish[i].GetComponent<FlockFish>().myManager = this;
+            allFish[i] = Instantiate(fishPrefab, pos, Quaternion.identify);
+
         }
+
     }
+
 
     // Update is called once per frame
     void Update()
     {
         
+
+
     }
+
 }

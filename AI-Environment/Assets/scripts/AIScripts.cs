@@ -8,6 +8,7 @@ using System;
 
 public class AIScripts : MonoBehaviour
 {
+
     //Characters
     public NavMeshAgent agent;
     public GameObject target;
@@ -36,11 +37,11 @@ public class AIScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float distance = Vector3.Distance(target.transform.position, transform.position);
         if ((distance < minDistance))
         {
-            //Vector3 targetDir = target.transform.position - transform.position;
-            //float lookAhead = targetDir.magnitude / agent.speed;
+
             Seek(target.transform.position);
            
         }
@@ -50,10 +51,6 @@ public class AIScripts : MonoBehaviour
             if (agent.remainingDistance < 10.0f )
             Wander();
         }
-
-
-       
-
 
     }
 
@@ -82,6 +79,7 @@ public class AIScripts : MonoBehaviour
 
     void Hide()
     {
+
         Func<GameObject, float> distance =
             (hs) => Vector3.Distance(target.transform.position,
                                      hs.transform.position);
@@ -93,8 +91,6 @@ public class AIScripts : MonoBehaviour
         RaycastHit info;
         hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 50f);
         Seek(info.point + dir.normalized);
-
-
 
     }
 
@@ -113,4 +109,5 @@ public class AIScripts : MonoBehaviour
 
 
     }
+
 }
