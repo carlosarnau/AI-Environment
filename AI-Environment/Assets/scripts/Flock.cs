@@ -6,6 +6,7 @@ public class Flock : MonoBehaviour
 {
 
     float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,20 @@ public class Flock : MonoBehaviour
     void Update()
     {
 
-        ApplyRules();
+        if (Random.Range(0,100) < 10)
+        {
+
+            speed = Random.Range(FlockManager.FM.minSpeed, FlockManager.FM.maxSpeed);
+
+        }
+
+        if (Random.Range(0, 100) < 10)
+        {
+
+            ApplyRules();
+
+        }
+
         this.transform.Translate(0, 0, speed * Time.deltaTime);
 
     }
@@ -30,8 +44,9 @@ public class Flock : MonoBehaviour
 
         GameObject[] gos;
         gos = FlockManager.FM.allFish;
-        Vector3 vcentre = new Vector3(121, 12, 105);
-        Vector3 vavoid = new Vector3(121, 12, 105);
+
+        Vector3 vcentre = Vector3.zero;
+        Vector3 vavoid = Vector3.zero;
         float gSpeed = 0.01f;
         float nDistance;
         int groupSize = 0;
@@ -67,9 +82,14 @@ public class Flock : MonoBehaviour
         if (groupSize > 0)
         {
 
-            vcentre = vcentre / groupSize;
+            vcentre = vcentre / groupSize + (FlockManager.FM.goalPosition - this.transform.position);
             speed = gSpeed / groupSize;
+
+            if (speed > FlockManager.FM.maxSpeed)
+                speed = FlockManager.FM.maxSpeed;
+
             Vector3 direction = (vcentre + vavoid) - transform.position;
+
             if (direction != Vector3.zero)
             {
 

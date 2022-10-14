@@ -10,6 +10,7 @@ public class FlockManager : MonoBehaviour
     public int numFish = 20;
     public GameObject[] allFish;
     public Vector3 swimLimits = new Vector3(5, 5, 5);
+    public Vector3 goalPosition = Vector3.zero;
 
     [Header("Fish Settings")]
     [Range(0.0f, 5.0f)]
@@ -38,6 +39,7 @@ public class FlockManager : MonoBehaviour
         }
 
         FM = this;
+        goalPosition = this.transform.position;
 
     }
 
@@ -46,7 +48,14 @@ public class FlockManager : MonoBehaviour
     void Update()
     {
 
+        if (Random.Range(0, 100) < 10)
+        {
 
+            goalPosition = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
+                                                                Random.Range(-swimLimits.y, swimLimits.y),
+                                                                Random.Range(-swimLimits.z, swimLimits.z));
+
+        }
 
     }
 
