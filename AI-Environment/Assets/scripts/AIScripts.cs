@@ -26,6 +26,10 @@ public class AIScripts : MonoBehaviour
     float radius = 10.0f;
     float offset = 10.0f;
     GameObject[] hidingSpots;
+    public GameObject[] waypoints;
+    int patrolWP = 0;
+
+
     void Start()
     {
 
@@ -48,8 +52,17 @@ public class AIScripts : MonoBehaviour
 
         else if (wander)
         {
-            if (agent.remainingDistance < 10.0f )
+
+            if (agent.remainingDistance < 10.0f)
             Wander();
+
+        }
+
+        else if (patrol)
+        {
+
+            if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrol();
+
         }
 
     }
@@ -80,15 +93,13 @@ public class AIScripts : MonoBehaviour
     void Hide()
     {
 
-        Func<GameObject, float> distance =
-            (hs) => Vector3.Distance(target.transform.position,
-                                     hs.transform.position);
-        GameObject hidingSpot = hidingSpots.Select(
-            ho => (distance(ho), ho)
-            ).Min().Item2;
+        Func<GameObject, float> distance = (hs) => Vector3.Distance(target.transform.position, hs.transform.position);
+        GameObject hidingSpot = hidingSpots.Select(ho => (distance(ho), ho)).Min().Item2;
         Vector3 dir = hidingSpot.transform.position - target.transform.position;
+
         Ray backRay = new Ray(hidingSpot.transform.position, -dir.normalized);
         RaycastHit info;
+
         hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 50f);
         Seek(info.point + dir.normalized);
 
@@ -98,7 +109,8 @@ public class AIScripts : MonoBehaviour
     void Patrol()
     {
 
-
+        patrolWP = (patrolWP + 1) % waypoints.Length;
+        Seek(waypoints[patrolWP].transform.position);
 
     }
 
