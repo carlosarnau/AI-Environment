@@ -25,7 +25,7 @@ public class AIScripts : MonoBehaviour
     float stopDistance = 1.0f;
     float radius = 10.0f;
     float offset = 10.0f;
-    GameObject[] hidingSpots;
+    public GameObject[] hidingSpots;
     public GameObject[] waypoints;
     int patrolWP = 0;
 
@@ -57,7 +57,8 @@ public class AIScripts : MonoBehaviour
         {
 
             if (agent.remainingDistance < 10.0f)
-            Wander();
+                Wander();
+            else Hide();
 
         }
 
@@ -65,13 +66,6 @@ public class AIScripts : MonoBehaviour
         {
 
             if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrol();
-
-        }
-
-        if (hide)
-        {
-
-            if (agent.remainingDistance < 10.0f) Hide();
 
         }
 
