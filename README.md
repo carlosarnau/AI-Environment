@@ -6,5 +6,5 @@ Scripts used:
 - Seek ✔
 - Wander ✔
 - Hide ✔
-- Patrol ❌
-- Flocking ❌
+- Patrol ✔
+- Flocking ✔
