@@ -5562,10 +5562,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1975928572}
-  target: {fileID: 0}
+  target: {fileID: 1975928570}
   seek: 0
-  wander: 0
-  hide: 1
+  wander: 1
+  hide: 0
   patrol: 0
   flee: 0
   minDistance: 20
@@ -5914,7 +5914,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5498715902782710913, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.32
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 5498715902782710913, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5922,7 +5922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5498715902782710913, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.58
+      value: 85.4
       objectReference: {fileID: 0}
     - target: {fileID: 5498715902782710913, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}
       propertyPath: m_LocalRotation.x
