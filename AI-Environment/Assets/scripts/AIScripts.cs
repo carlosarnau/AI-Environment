@@ -47,7 +47,7 @@ public class AIScripts : MonoBehaviour
         {
 
             Seek(target.transform.position);
-           
+
         }
 
         else if (wander)
@@ -62,6 +62,13 @@ public class AIScripts : MonoBehaviour
         {
 
             if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrol();
+
+        }
+
+        if (hide)
+        {
+
+            if (agent.remainingDistance < 10.0f) Hide();
 
         }
 
@@ -92,6 +99,8 @@ public class AIScripts : MonoBehaviour
 
     void Hide()
     {
+
+        hidingSpots = GameObject.FindGameObjectsWithTag("hide");
 
         Func<GameObject, float> distance = (hs) => Vector3.Distance(target.transform.position, hs.transform.position);
         GameObject hidingSpot = hidingSpots.Select(ho => (distance(ho), ho)).Min().Item2;
