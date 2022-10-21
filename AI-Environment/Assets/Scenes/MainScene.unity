@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0f4951abc26dec489c74a4fded452d3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0f4951abc26dec489c74a4fded452d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24d0c6c977c6a4142aa41b4e731e55ff, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24d0c6c977c6a4142aa41b4e731e55ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -535,38 +535,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 90980964}
   target: {fileID: 775964042}
-  seek: 1
-  wander: 0
-  hide: 0
-  patrol: 1
-  flee: 0
+  thief: 0
+  police: 1
+  Elder: 0
   minDistance: 20
   hidingSpots: []
-  waypoints: []
---- !u!114 &90980966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90980962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94b997640fd15a48b0c605d7bebe2d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {fileID: 168006284}
-  - {fileID: 248932966}
-  - {fileID: 884700735}
-  - {fileID: 410868692}
-  - {fileID: 798079206}
-  - {fileID: 1246569901}
-  - {fileID: 1472349016}
-  - {fileID: 361739661}
-  - {fileID: 1908194013}
-  - {fileID: 2078011152}
-  - {fileID: 642519881}
+  waypoints:
+  - {fileID: 168006283}
+  - {fileID: 248932965}
+  - {fileID: 884700734}
+  - {fileID: 410868691}
+  - {fileID: 798079205}
+  - {fileID: 1246569900}
+  - {fileID: 1472349015}
+  - {fileID: 361739660}
+  - {fileID: 1908194012}
+  - {fileID: 2078011151}
+  - {fileID: 642519880}
 --- !u!1001 &104883528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1573,11 +1558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 399990755}
   target: {fileID: 0}
-  seek: 0
-  wander: 1
-  hide: 0
-  patrol: 0
-  flee: 0
+  thief: 0
+  police: 0
+  Elder: 1
   minDistance: 20
   hidingSpots: []
   waypoints: []
@@ -1843,7 +1826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00b0d9f02adf9f4ab91a1cafb5fc7a5, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b00b0d9f02adf9f4ab91a1cafb5fc7a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1945,7 +1928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &539442866
 PrefabInstance:
@@ -2157,7 +2140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b417f391d7adc04baca23029b261f0c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b417f391d7adc04baca23029b261f0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2819,11 +2802,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 775964044}
   target: {fileID: 90980962}
-  seek: 0
-  wander: 0
-  hide: 0
-  patrol: 0
-  flee: 0
+  thief: 0
+  police: 0
+  Elder: 0
   minDistance: 20
   hidingSpots:
   - {fileID: 1907818765}
@@ -2887,7 +2868,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775964042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 99, y: 3.26, z: 45.4}
+  m_LocalPosition: {x: 75, y: -0.4, z: 74.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 47196157}
@@ -3040,7 +3021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ba66ce481e27174c9f016c20b8401d9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ba66ce481e27174c9f016c20b8401d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3623,11 +3604,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 991568007}
   target: {fileID: 0}
-  seek: 0
-  wander: 1
-  hide: 0
-  patrol: 0
-  flee: 0
+  thief: 0
+  police: 0
+  Elder: 1
   minDistance: 20
   hidingSpots: []
   waypoints: []
@@ -3774,11 +3753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1024160862}
   target: {fileID: 0}
-  seek: 0
-  wander: 1
-  hide: 0
-  patrol: 0
-  flee: 0
+  thief: 0
+  police: 0
+  Elder: 1
   minDistance: 20
   hidingSpots: []
   waypoints: []
@@ -3852,7 +3829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1102356540
 PrefabInstance:
@@ -4357,7 +4334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f57fdd073be1a5448ac5876c67c5293, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f57fdd073be1a5448ac5876c67c5293, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4542,7 +4519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21996f840ac9d8245b34cb997347918e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21996f840ac9d8245b34cb997347918e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5049,7 +5026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8b361b248233ff478ee4d4d5ead30ff, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8b361b248233ff478ee4d4d5ead30ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5665,11 +5642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1515614590}
   target: {fileID: 0}
-  seek: 0
-  wander: 1
-  hide: 0
-  patrol: 0
-  flee: 0
+  thief: 0
+  police: 0
+  Elder: 1
   minDistance: 20
   hidingSpots: []
   waypoints: []
@@ -6477,7 +6452,7 @@ Transform:
   - {fileID: 104883529}
   - {fileID: 829438405}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998138851 stripped
 GameObject:
@@ -6871,7 +6846,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a59b2f954a0dc6e48871a32ea4692e98, type: 2}
     - target: {fileID: 8572324284013706478, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}
       propertyPath: m_Name
-      value: SHAARK
+      value: SHARK
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6504e6506b0160c45a7f848aaecf1df6, type: 3}

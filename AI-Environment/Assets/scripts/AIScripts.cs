@@ -13,13 +13,18 @@ public class AIScripts : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject target;
 
+    //characters
+    public bool thief;
+    public bool police;
+    public bool Elder;
+    
     //functions
-    public bool seek;
-    public bool wander;
-    public bool hide;
-    public bool patrol;
-    public bool flee;
-
+    bool seek = false;
+    bool wander = false;
+    bool hide = false;
+    bool patrol = false;
+    bool flee = false;
+    
     //Stats
     public float minDistance = 20.0f;
     float stopDistance = 1.0f;
@@ -32,7 +37,20 @@ public class AIScripts : MonoBehaviour
 
     void Start()
     {
-
+        //Select functions according to character
+        if(thief)
+        {
+            wander = true;
+        }
+        if(police)
+        {
+            patrol = true;
+            seek = true;
+        }
+        if(Elder)
+        {
+            wander = true;
+        }
         if (wander) Wander();
 
     }
@@ -41,19 +59,16 @@ public class AIScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(seek)
+        float distance = Vector3.Distance(target.transform.position, transform.position);
+        if ((distance < minDistance)&& seek)
         {
-            float distance = Vector3.Distance(target.transform.position, transform.position);
-            if ((distance < minDistance))
-            {
 
-                Seek(target.transform.position);
+            Seek(target.transform.position);
 
-            }
         }
-        
 
-        else if (wander)
+
+        if (wander)
         {
 
             if (agent.remainingDistance < 10.0f)
@@ -62,7 +77,7 @@ public class AIScripts : MonoBehaviour
 
         }
 
-        else if (patrol)
+        if (patrol)
         {
 
             if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrol();
