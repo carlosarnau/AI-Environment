@@ -27,6 +27,7 @@ public class AIScripts : MonoBehaviour
     
     //Stats
     public float minDistance = 20.0f;
+    float closeToTargetDistance = 7.0f;
     float stopDistance = 1.0f;
     float radius = 10.0f;
     float offset = 10.0f;
@@ -63,11 +64,15 @@ public class AIScripts : MonoBehaviour
         if ((distance < minDistance)&& seek)
         {
 
+            if((distance < closeToTargetDistance))
+            {
+                agent.stoppingDistance = 10.0f;
+            }
+            else agent.stoppingDistance = 0.0f;
             Seek(target.transform.position);
-
         }
 
-
+        
         if (wander)
         {
 

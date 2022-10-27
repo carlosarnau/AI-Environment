@@ -2802,7 +2802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 775964044}
   target: {fileID: 90980962}
-  thief: 0
+  thief: 1
   police: 0
   Elder: 0
   minDistance: 20
