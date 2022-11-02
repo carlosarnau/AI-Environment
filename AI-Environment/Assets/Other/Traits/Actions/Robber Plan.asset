@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93ef591de1cd6a42b724b9314379ad4, type: 3}
+  m_Name: Robber Plan
+  m_EditorClassIdentifier: 
+  m_ActionDefinitions:
+  - {fileID: 11400000, guid: 5636896d8c0cc6b4fa9c4dc51df0d805, type: 2}
+  - {fileID: 11400000, guid: 304184e991988eb43970e6ed20ef522c, type: 2}
+  - {fileID: 11400000, guid: 82394a66ecf852447ac55db49cbe65be, type: 2}
+  m_StateTerminationDefinitions:
+  - {fileID: 11400000, guid: c7e7b8eeadee89046a7a07af88955fb1, type: 2}
+  m_CustomCumulativeRewardEstimator: 
+  m_DefaultEstimateLower: -100
+  m_DefaultEstimateAverage: 0
+  m_DefaultEstimateUpper: 100
+  DiscountFactor: 0.95

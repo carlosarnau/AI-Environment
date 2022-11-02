@@ -2781,6 +2781,11 @@ GameObject:
   - component: {fileID: 775964045}
   - component: {fileID: 775964044}
   - component: {fileID: 775964043}
+  - component: {fileID: 775964050}
+  - component: {fileID: 775964049}
+  - component: {fileID: 775964048}
+  - component: {fileID: 775964047}
+  - component: {fileID: 775964046}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -2875,6 +2880,114 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775964046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775964042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8ac131c09d04008af565adfda708ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ProblemDefinition: {fileID: 11400000, guid: 5e7dc51763e2a4847a7348065545c541, type: 2}
+  m_InitializeOnStart: 1
+  m_PlannerSettings:
+    PlanningIterationsPerUpdate: 1
+    StateExpansionBudgetPerIteration: 1
+    UseCustomPlanningFrequency: 0
+    MinFramesPerPlanningUpdate: 0
+    CapPlanSize: 0
+    MaxStatesInPlan: 0
+    StopPlanningWhenToleranceAchieved: 0
+    RootEstimatedRewardTolerance: 0
+    CapPlanUpdates: 0
+    MaxUpdates: 2147483647
+    GraphSelectionJobMode: 0
+    GraphBackpropagationJobMode: 0
+  m_ExecutionSettings:
+    ExecutionMode: 0
+    MaximumDecisionTolerance: 3.4028235e+38
+    MinimumPlanSize: 0
+    MinimumPlanningTime: 0
+  m_WorldObjectQuery: {fileID: 0}
+  m_ActionExecuteInfos:
+  - m_ActionName: Wander
+    m_PlanExecutorStateUpdateMode: 0
+    m_Method: 
+    m_SourceGameObject: {fileID: 775964042}
+    m_Source: {fileID: 0}
+    m_Arguments: []
+  - m_ActionName: Approach
+    m_PlanExecutorStateUpdateMode: 0
+    m_Method: 
+    m_SourceGameObject: {fileID: 775964042}
+    m_Source: {fileID: 0}
+    m_Arguments: []
+  - m_ActionName: Steal
+    m_PlanExecutorStateUpdateMode: 0
+    m_Method: 
+    m_SourceGameObject: {fileID: 775964042}
+    m_Source: {fileID: 0}
+    m_Arguments: []
+  m_AutoUpdate: 1
+--- !u!114 &775964047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775964042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fffd197a23152f48958a84d47c07f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_p338023941: {fileID: 775964045}
+  m_p2084774077: {x: 75, y: -0.4, z: 74.3}
+  m_p2006904664: {x: 0, y: 0, z: 1}
+--- !u!114 &775964048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775964042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f63679e3a240e4da816b43a6cced4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_p0: 0
+  m_p1: 0
+  m_p2: 0
+--- !u!114 &775964049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775964042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52a27e7e82aaf840bc19d82abd63620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &775964050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775964042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca305a07e837a645a0fc69a59f3ea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EnableTraitInspectors: 1
 --- !u!1001 &781088105
 PrefabInstance:
   m_ObjectHideFlags: 0
