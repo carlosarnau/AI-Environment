@@ -38,6 +38,7 @@ public class AIScripts : MonoBehaviour
 
     void Start()
     {
+
         //Select functions according to character
         if(thief)
         {
@@ -72,12 +73,10 @@ public class AIScripts : MonoBehaviour
             Seek(target.transform.position);
         }
 
-        
         if (wander)
         {
 
-            if (agent.remainingDistance < 10.0f)
-                Wander();
+            if (agent.remainingDistance < 10.0f) Wander();
             else Hide();
 
         }

@@ -1593,14 +1593,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399990753}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.2, y: 11.3, z: 135.7}
+  m_LocalRotation: {x: -0, y: 0.942816, z: -0, w: 0.33331373}
+  m_LocalPosition: {x: 127.6, y: 11.3, z: 117.5}
   m_LocalScale: {x: 3.4733, y: 3.4733, z: 3.4733}
   m_Children:
   - {fileID: 929515502}
   m_Father: {fileID: 0}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 141.06, z: 0}
 --- !u!1 &410868691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,8 +3612,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2705978, y: -0.6532818, z: 0.27059805, w: 0.6532813}
-  m_LocalPosition: {x: 150.7, y: 64.2, z: 63.4}
+  m_LocalRotation: {x: 0.27059805, y: -0.6532815, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 150.7, y: 64.2, z: 70.31}
   m_LocalScale: {x: 1, y: 1, z: 0.56309}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3648,6 +3648,7 @@ GameObject:
   - component: {fileID: 991568008}
   - component: {fileID: 991568007}
   - component: {fileID: 991568006}
+  - component: {fileID: 991568009}
   m_Layer: 0
   m_Name: ExternalFish (1)
   m_TagString: Untagged
@@ -3664,17 +3665,65 @@ MonoBehaviour:
   m_GameObject: {fileID: 991568005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2f13f7feaea5a4bb4a0a8438472ed2, type: 3}
+  m_Script: {fileID: 11500000, guid: 422fb6956201c7944ae2113a1a53b0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 991568007}
-  target: {fileID: 0}
-  thief: 0
-  police: 0
-  Elder: 1
-  minDistance: 20
-  hidingSpots: []
-  waypoints: []
+  maxTasksPerTick: 500
+  behavior: {fileID: 11400000, guid: a30c878754e1d8747964343809ca82ca, type: 2}
+  paused: 0
+  restartWhenFinished: 0
+  blackboard:
+    intParams: 
+    intParamsNames: []
+    intParamsLostDefaultValue: 
+    boolParams: 
+    boolParamsNames: []
+    boolParamsLostDefaultValue: 
+    floatParams: []
+    floatParamsNames: []
+    floatParamsLostDefaultValue: 
+    stringParams: []
+    stringParamsNames: []
+    stringParamsLostDefaultValue: 
+    colorParams: []
+    colorParamsNames: []
+    colorParamsLostDefaultValue: 
+    objectParams:
+    - {fileID: 1560299274}
+    - {fileID: 1203662098}
+    objectParamsNames:
+    - treasure
+    - area
+    objectParamsLostDefaultValue: 
+    layerMaskParams: []
+    layerMaskParamsNames: []
+    layerMaskParamsLostDefaultValue: 
+    enumParamsNames: []
+    enumParamsLostDefaultValue: 
+    vector2Params: []
+    vector2ParamsNames: []
+    vector2ParamsLostDefaultValue: 
+    vector3Params: []
+    vector3ParamsNames: []
+    vector3ParamsLostDefaultValue: 
+    vector4Params: []
+    vector4ParamsNames: []
+    vector4ParamsLostDefaultValue: 
+    rectParams: []
+    rectParamsNames: []
+    rectParamsLostDefaultValue: 
+    animationCurveParams: []
+    animationCurveParamsNames: []
+    animationCurveParamsLostDefaultValue: 
+    boundsParams: []
+    boundsParamsNames: []
+    boundsParamsLostDefaultValue: 
+    gradientParams: []
+    gradientParamsNames: []
+    gradientParamsLostDefaultValue: 
+    quaternionParams: []
+    quaternionParamsNames: []
+    quaternionParamsLostDefaultValue: 
 --- !u!195 &991568007
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3704,14 +3753,82 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991568005}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.2, y: 12.6, z: 86.5}
+  m_LocalRotation: {x: -0, y: 0.43703288, z: -0, w: -0.89944553}
+  m_LocalPosition: {x: 91.60411, y: 1.9300001, z: 86.426384}
   m_LocalScale: {x: 3.4733, y: 3.4733, z: 3.4733}
   m_Children:
   - {fileID: 1224669660}
   m_Father: {fileID: 0}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 308.171, z: 0}
+--- !u!114 &991568009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991568005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422fb6956201c7944ae2113a1a53b0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTasksPerTick: 500
+  behavior: {fileID: 11400000, guid: 6146cd788ce50314aabf314e99e62f84, type: 2}
+  paused: 0
+  restartWhenFinished: 0
+  blackboard:
+    intParams: 
+    intParamsNames: []
+    intParamsLostDefaultValue: 
+    boolParams: 
+    boolParamsNames: []
+    boolParamsLostDefaultValue: 
+    floatParams: []
+    floatParamsNames: []
+    floatParamsLostDefaultValue: 
+    stringParams: []
+    stringParamsNames: []
+    stringParamsLostDefaultValue: 
+    colorParams: []
+    colorParamsNames: []
+    colorParamsLostDefaultValue: 
+    objectParams:
+    - {fileID: 1024160860}
+    - {fileID: 1560299274}
+    objectParamsNames:
+    - cop
+    - treasure
+    objectParamsLostDefaultValue: 
+    layerMaskParams: []
+    layerMaskParamsNames: []
+    layerMaskParamsLostDefaultValue: 
+    enumParamsNames: []
+    enumParamsLostDefaultValue: 
+    vector2Params: []
+    vector2ParamsNames: []
+    vector2ParamsLostDefaultValue: 
+    vector3Params: []
+    vector3ParamsNames: []
+    vector3ParamsLostDefaultValue: 
+    vector4Params: []
+    vector4ParamsNames: []
+    vector4ParamsLostDefaultValue: 
+    rectParams: []
+    rectParamsNames: []
+    rectParamsLostDefaultValue: 
+    animationCurveParams: []
+    animationCurveParamsNames: []
+    animationCurveParamsLostDefaultValue: 
+    boundsParams: []
+    boundsParamsNames: []
+    boundsParamsLostDefaultValue: 
+    gradientParams: []
+    gradientParamsNames: []
+    gradientParamsLostDefaultValue: 
+    quaternionParams: []
+    quaternionParamsNames: []
+    quaternionParamsLostDefaultValue: 
 --- !u!1001 &995602842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3796,7 +3913,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1024160863}
   - component: {fileID: 1024160862}
-  - component: {fileID: 1024160861}
   m_Layer: 0
   m_Name: ExternalFish (3)
   m_TagString: Untagged
@@ -3804,26 +3920,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1024160861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024160860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2f13f7feaea5a4bb4a0a8438472ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 1024160862}
-  target: {fileID: 0}
-  thief: 0
-  police: 0
-  Elder: 1
-  minDistance: 20
-  hidingSpots: []
-  waypoints: []
 --- !u!195 &1024160862
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3854,7 +3950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024160860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.8, y: 13.8, z: 54.7}
+  m_LocalPosition: {x: 91.8, y: 1.93, z: 101.1}
   m_LocalScale: {x: 3.4733, y: 3.4733, z: 3.4733}
   m_Children:
   - {fileID: 556565487}
@@ -5897,6 +5993,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49c45d1cc849ed048a34a96dc25a6687, type: 3}
   m_PrefabInstance: {fileID: 157747352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1560299274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c07f9d1f4f43272469e68bf4b14a6462, type: 3}
+  m_PrefabInstance: {fileID: 137605420}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1566970259
 PrefabInstance:
