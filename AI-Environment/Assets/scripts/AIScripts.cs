@@ -61,6 +61,7 @@ public class AIScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float distance = Vector3.Distance(target.transform.position, transform.position);
         if ((distance < minDistance)&& seek)
         {
