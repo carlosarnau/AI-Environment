@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/BehaviorTrees/ToSteal.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"6146cd788ce50314aabf314e99e62f84\" nextId=\"33\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"6146cd788ce50314aabf314e99e62f84\" nextId=\"34\">\r\n      <root>\r\n       
     <SequenceNode id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"Floor\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"Treasure\" type=\"UnityEngine.GameObject\"
@@ -28,7 +28,7 @@ MonoBehaviour:
     </elem>\r\n        <elem>\r\n          <ActionNode id=\"19\" />\r\n        </elem>\r\n       
     <elem>\r\n          <RepeatDecorator id=\"4\" />\r\n        </elem>\r\n     
     </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </SequenceNode>\r\n    <ParallelNode id=\"28\" policy=\"AndPolicy\">\r\n     
+    />\r\n    </SequenceNode>\r\n    <ParallelNode id=\"28\" policy=\"OrPolicy\">\r\n     
     <children>\r\n        <elem>\r\n          <RepeatUntilSuccess id=\"31\" />\r\n       
     </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"30\" />\r\n       
     </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
@@ -88,52 +88,52 @@ MonoBehaviour:
     id=\"19\" />\r\n          <RepeatUntilSuccess id=\"31\" />\r\n          <SubbehaviorNode
     id=\"30\" />\r\n          <ConditionNode id=\"32\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <SequenceNode id=\"1\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"631.9673 96.02826\" name=\"Sequence\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"662.1337 3.861603\" name=\"Sequence\"
     description=\"Executes all its children in sequence until all of them are successful\"
     cardinality=\"-1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <ParallelNode id=\"28\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"268.7085 262.5003\" name=\"Parallel\" description=\"Executes all its
+    position=\"298.8752 170.3336\" name=\"Parallel\" description=\"Executes all its
     children in parallel until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ParallelNode id=\"28\" />\r\n         
     <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n   
-    <ActionNode id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
-    position=\"641.6135 259.5919\" name=\"GameObject/SetActive\" description=\"Activates
+    <ActionNode id=\"19\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"597.7799 203.4252\" name=\"GameObject/SetActive\" description=\"Activates
     or deactivates the game object\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"19\" />\r\n         
     <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <RepeatDecorator id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"1191.216 302.2784\" name=\"Repeat\" description=\"Repeats
+    selected=\"False\" position=\"1221.383 210.1117\" name=\"Repeat\" description=\"Repeats
     the execution of its child node\" cardinality=\"1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"4\" />\r\n         
     <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
     <RepeatUntilSuccess id=\"31\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"67.93774 483.9999\" name=\"Repeat Until Success\"
+    selected=\"False\" position=\"98.1045 391.8333\" name=\"Repeat Until Success\"
     description=\"Repeats the execution of its child node until it success\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <RepeatUntilSuccess
     id=\"31\" />\r\n          <ParallelNode id=\"28\" />\r\n        </data>\r\n     
     </_data>\r\n    </RepeatUntilSuccess>\r\n    <SubbehaviorNode id=\"30\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"368.7077
-    524.1666\" name=\"BeforeToSteal\" description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"398.8745
+    432\" name=\"BeforeToSteal\" description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"30\" />\r\n         
     <ParallelNode id=\"28\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
     <SequenceNode id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"1180.329 443.253\" name=\"Sequence\" description=\"Executes all its
+    position=\"1210.496 351.0863\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"9\" />\r\n         
     <RepeatDecorator id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <ConditionNode id=\"32\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"95.93777 637.9995\" name=\"Perception/IsTargetClose\"
+    selected=\"False\" position=\"126.1045 545.8329\" name=\"Perception/IsTargetClose\"
     description=\"Checks whether a target is close depending on a given distance\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionNode id=\"32\" />\r\n          <RepeatUntilSuccess id=\"31\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"10\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1079.968
-    620.4777\" name=\"MyActions/Hide\" description=\"Get the Vector3 for hiding.\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1110.135
+    528.3111\" name=\"MyActions/Hide\" description=\"Get the Vector3 for hiding.\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"10\" />\r\n          <SequenceNode id=\"9\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"11\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"1292.855 622.3671\" name=\"Navigation/MoveToPosition\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"1323.022 530.2005\" name=\"Navigation/MoveToPosition\"
     description=\"Moves the game object to a given position by using a NavMeshAgent\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"11\" />\r\n          <SequenceNode id=\"9\" />\r\n        </data>\r\n     

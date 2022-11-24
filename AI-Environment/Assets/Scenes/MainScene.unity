@@ -2975,7 +2975,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTasksPerTick: 500
-  behavior: {fileID: 11400000, guid: a30c878754e1d8747964343809ca82ca, type: 2}
+  behavior: {fileID: 11400000, guid: 6146cd788ce50314aabf314e99e62f84, type: 2}
   paused: 0
   restartWhenFinished: 0
   blackboard:
@@ -3033,9 +3033,11 @@ MonoBehaviour:
     objectParams:
     - {fileID: 1203662098}
     - {fileID: 1834990028}
+    - {fileID: 775964042}
     objectParamsNames:
     - Floor
     - Treasure
+    - Robber
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
