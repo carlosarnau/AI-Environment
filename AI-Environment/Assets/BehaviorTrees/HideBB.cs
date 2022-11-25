@@ -13,7 +13,7 @@ public class HideBB : BasePrimitiveAction
 
     [OutParam("hide")]
     [Help("Vector3 for higing.")]
-    public Vector3 hide;
+    public Vector3 hide = new Vector3(117, 12, 127);
 
     public override TaskStatus OnUpdate()
     {
