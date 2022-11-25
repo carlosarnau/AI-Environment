@@ -511,37 +511,6 @@ NavMeshAgent:
   m_BaseOffset: 2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &90980965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90980962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2f13f7feaea5a4bb4a0a8438472ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 90980964}
-  target: {fileID: 775964042}
-  thief: 0
-  police: 1
-  Elder: 0
-  minDistance: 20
-  hidingSpots: []
-  waypoints:
-  - {fileID: 168006283}
-  - {fileID: 248932965}
-  - {fileID: 884700734}
-  - {fileID: 410868691}
-  - {fileID: 798079205}
-  - {fileID: 1246569900}
-  - {fileID: 1472349015}
-  - {fileID: 361739660}
-  - {fileID: 1908194012}
-  - {fileID: 2078011151}
-  - {fileID: 642519880}
 --- !u!1001 &104883528
 PrefabInstance:
   m_ObjectHideFlags: 0
