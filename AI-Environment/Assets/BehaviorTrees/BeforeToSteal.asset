@@ -85,6 +85,6 @@ MonoBehaviour:
     the game object towards a given target by using a NavMeshAgent\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.8
+  zoom: 0.6
   subslist: []
   _guid: a30c878754e1d8747964343809ca82ca
