@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/BehaviorTrees/Shark.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"4af2f63e0d275574ba35c01ef50ee462\" nextId=\"26\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"4af2f63e0d275574ba35c01ef50ee462\" nextId=\"27\">\r\n      <root>\r\n       
     <SequenceNode id=\"4\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"area\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"Robber\" type=\"UnityEngine.GameObject\"
@@ -74,7 +74,7 @@ MonoBehaviour:
     <RepeatDecorator id=\"22\" />\r\n          <ActionNode id=\"10\" />\r\n         
     <ConditionNode id=\"21\" />\r\n          <RepeatDecorator id=\"24\" />\r\n         
     <ActionNode id=\"25\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
-    <SequenceNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    <SequenceNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
     position=\"546.1082 51.03578\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"4\" />\r\n        </data>\r\n     
