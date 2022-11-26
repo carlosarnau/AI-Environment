@@ -71,7 +71,7 @@ namespace BBUnity.Actions
                 }
                 else
                 {
-                    return gameObject.transform.position + new Vector3(UnityEngine.Random.Range(-5f, 5f), 0, UnityEngine.Random.Range(-5f, 5f));
+                    return gameObject.transform.position + new Vector3(UnityEngine.Random.Range(-25f, 25f), 0, UnityEngine.Random.Range(-25f, 25f));
                 }
             }
         }
