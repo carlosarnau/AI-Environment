@@ -7,12 +7,11 @@ public class FSM : MonoBehaviour
     float offset = 5;
     float radius = 3;
 
-    GameObject[] ABOCHI;
+    GameObject[] seaplants;
     public float distSitting = 10f;
-    //public move_03 moves;
     UnityEngine.AI.NavMeshAgent agent;
 
-    private WaitForSeconds wait = new WaitForSeconds(0.05f); // == 1/20
+    private WaitForSeconds wait = new WaitForSeconds(0.05f);    // == 1/20
     delegate IEnumerator State();
     private State state;
 
@@ -22,12 +21,9 @@ public class FSM : MonoBehaviour
 
     IEnumerator Start()
     {
-
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
 
-        ABOCHI = GameObject.FindGameObjectsWithTag("LookingSpots");
-        // moves = gameObject.GetComponent<move_03>();
-
+        seaplants = GameObject.FindGameObjectsWithTag("LookingSpots");
 
         yield return wait;
 
@@ -39,19 +35,15 @@ public class FSM : MonoBehaviour
 
     private void Update()
     {
+        foodPlants = seaplants[0];
 
-        foodPlants = ABOCHI[0];
-
-        for (int i = 0; i < ABOCHI.Length; i++)
+        for (int i = 0; i < seaplants.Length; i++)
         {
-            if (Vector3.Distance(foodPlants.transform.position, agent.transform.position) > Vector3.Distance(ABOCHI[i].transform.position, agent.transform.position))
+            if (Vector3.Distance(foodPlants.transform.position, agent.transform.position) > Vector3.Distance(seaplants[i].transform.position, agent.transform.position))
             {
-                foodPlants = ABOCHI[i];
-            }// player to seatspot vs player to ABOCHI [i] --> take closer
+                foodPlants = seaplants[i];
+            }   // player to seaplant vs player to eating [i] --> take closer
         }
-
-
-
 
         if (state == Wander)
         {
@@ -61,14 +53,10 @@ public class FSM : MonoBehaviour
         {
             Approaching();
         }
-        else if (state == Sittings)
+        else if (state == Eating)
         {
-            Sittings();
+            Eating();
         }
-
-
-
-
     }
 
     IEnumerator Wander()
@@ -78,9 +66,6 @@ public class FSM : MonoBehaviour
         {
             while (Vector3.Distance(agent.transform.position, foodPlants.transform.position) > distSitting)
             {
-
-
-
                 Wander_();
                 yield return wait;
             };
@@ -89,19 +74,14 @@ public class FSM : MonoBehaviour
         }
         else
         {
-
             while (forcedWanderTimer >= 0)
             {
-
                 forcedWanderTimer--;
 
                 Wander_();
                 yield return wait;
             };
-
         }
-
-
     }
 
     IEnumerator Approaching()
@@ -126,8 +106,8 @@ public class FSM : MonoBehaviour
         if (sitting)
         {
             agent.speed = 0f;
-            Debug.Log("Sitting");
-            state = Sittings;
+            Debug.Log("Eating");
+            state = Eating;
             timer = 12;
         }
         else
@@ -137,10 +117,9 @@ public class FSM : MonoBehaviour
         }
     }
 
-
-    IEnumerator Sittings()
+    IEnumerator Eating()
     {
-        Debug.Log("Sittings");
+        Debug.Log("Eating");
 
         while (timer >= 0)
         {
@@ -154,7 +133,6 @@ public class FSM : MonoBehaviour
         forcedWanderTimer = 360;
         agent.speed = 3f;
     }
-
 
     void Wander_()
     {
