@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FSM : MonoBehaviour
 {
-
     float offset = 5;
     float radius = 3;
 

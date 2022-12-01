@@ -8,24 +8,23 @@ using System;
 
 public class AIScripts : MonoBehaviour
 {
-
-    //Characters
+    //  Characters
     public NavMeshAgent agent;
     public GameObject target;
 
-    //characters
+    //  Characters
     public bool thief;
     public bool police;
     public bool Elder;
     
-    //functions
+    //  Functions
     bool seek = false;
     bool wander = false;
     bool hide = false;
     bool patrol = false;
     bool flee = false;
     
-    //Stats
+    //  Stats
     public float minDistance = 20.0f;
     float closeToTargetDistance = 7.0f;
     float stopDistance = 1.0f;
@@ -35,11 +34,9 @@ public class AIScripts : MonoBehaviour
     public GameObject[] waypoints;
     int patrolWP = 0;
 
-
     void Start()
     {
-
-        //Select functions according to character
+        //  Select functions according to character
         if(thief)
         {
             wander = true;
@@ -54,18 +51,14 @@ public class AIScripts : MonoBehaviour
             wander = true;
         }
         if (wander) Wander();
-
     }
 
-
-    // Update is called once per frame
+    //  Update is called once per frame
     void Update()
     {
-
         float distance = Vector3.Distance(target.transform.position, transform.position);
         if ((distance < minDistance)&& seek)
         {
-
             if((distance < closeToTargetDistance))
             {
                 agent.stoppingDistance = 10.0f;
@@ -76,33 +69,22 @@ public class AIScripts : MonoBehaviour
 
         if (wander)
         {
-
             if (agent.remainingDistance < 10.0f) Wander();
             else Hide();
-
         }
 
         if (patrol)
         {
-
             if (!agent.pathPending && agent.remainingDistance < 0.5f) Patrol();
-
         }
-
     }
-
 
     void Seek(Vector3 pos)
     {
-
         agent.destination = pos;
-
     }
-
-
     void Wander()
     {
-
         Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
         localTarget += new Vector3(0, 0, offset);
 
@@ -110,13 +92,10 @@ public class AIScripts : MonoBehaviour
         worldTarget.y = 0f;
 
         Seek(worldTarget);
-
     }
-
 
     void Hide()
     {
-
         hidingSpots = GameObject.FindGameObjectsWithTag("hide");
 
         Func<GameObject, float> distance = (hs) => Vector3.Distance(target.transform.position, hs.transform.position);
@@ -128,24 +107,14 @@ public class AIScripts : MonoBehaviour
 
         hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 50f);
         Seek(info.point + dir.normalized);
-
     }
-
 
     void Patrol()
     {
-
         patrolWP = (patrolWP + 1) % waypoints.Length;
         Seek(waypoints[patrolWP].transform.position);
-
     }
-
 
     void Flee()
-    {
-
-
-
-    }
-
+    {}
 }

@@ -33,14 +33,14 @@ public class Moves : MonoBehaviour
 
         float toTarget = Vector3.Angle(this.transform.forward, this.transform.TransformVector(targetDir));
 
-        //        if ((toTarget > 90 && relativeHeading < 20) || ds.currentSpeed < 0.01f)
+        //  if ((toTarget > 90 && relativeHeading < 20) || ds.currentSpeed < 0.01f)
         if ((toTarget > 90 && relativeHeading < 20))
         {
             Seek(target.transform.position);
             return;
         }
 
-        //        float lookAhead = targetDir.magnitude / (agent.speed + ds.currentSpeed);
+        //  float lookAhead = targetDir.magnitude / (agent.speed + ds.currentSpeed);
         float lookAhead = targetDir.magnitude / (agent.speed);
         Seek(target.transform.position + target.transform.forward * lookAhead);
     }
@@ -48,22 +48,20 @@ public class Moves : MonoBehaviour
     public void Evade()
     {
         Vector3 targetDir = target.transform.position - this.transform.position;
-        //        float lookAhead = targetDir.magnitude / (agent.speed + ds.currentSpeed);
+        //  float lookAhead = targetDir.magnitude / (agent.speed + ds.currentSpeed);
         float lookAhead = targetDir.magnitude / agent.speed;
         Flee(target.transform.position + target.transform.forward * lookAhead);
     }
 
-
     Vector3 wanderTarget = Vector3.zero;
+
     public void Wander()
     {
         float wanderRadius = 10;
         float wanderDistance = 10;
         float wanderJitter = 1;
 
-        wanderTarget += new Vector3(Random.Range(-1.0f, 1.0f) * wanderJitter,
-                                        0,
-                                        Random.Range(-1.0f, 1.0f) * wanderJitter);
+        wanderTarget += new Vector3(Random.Range(-1.0f, 1.0f) * wanderJitter, 0, Random.Range(-1.0f, 1.0f) * wanderJitter);
         wanderTarget.Normalize();
         wanderTarget *= wanderRadius;
 
@@ -106,9 +104,7 @@ public class Moves : MonoBehaviour
         float distance = 250.0f;
         hideCol.Raycast(backRay, out info, distance);
 
-
         Seek(info.point + chosenDir.normalized);
-
     }
 
     public Vector3 HideValue()
@@ -138,8 +134,6 @@ public class Moves : MonoBehaviour
         float distance = 250.0f;
         hideCol.Raycast(backRay, out info, distance);
 
-
         return info.point + chosenDir.normalized;
-
     }
 }

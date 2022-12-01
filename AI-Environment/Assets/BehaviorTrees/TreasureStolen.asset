@@ -66,41 +66,41 @@ MonoBehaviour:
     id=\"23\" />\r\n          <PrioritySelectorNode id=\"20\" />\r\n          <ConditionEvalNode
     id=\"24\" />\r\n          <RepeatDecorator id=\"25\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"25\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"432.8546
-    -64.17058\" name=\"Repeat\" description=\"Repeats the execution of its child
-    node\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\"
-    />\r\n          <RepeatDecorator id=\"25\" />\r\n        </data>\r\n      </_data>\r\n   
-    </RepeatDecorator>\r\n    <SequenceNode id=\"1\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"424.5872 69.8725\" name=\"Sequence\"
-    description=\"Executes all its children in sequence until all of them are successful\"
-    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <SequenceNode id=\"1\" />\r\n          <RepeatDecorator id=\"25\" />\r\n       
-    </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <PrioritySelectorNode
-    id=\"20\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"379.0454 208.9242\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
-    id=\"20\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
-    </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"22\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"464.8638
-    582.0214\" name=\"MyConditions/Is Treasure gone?\" description=\"Eval\" cardinality=\"1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
-    id=\"22\" />\r\n          <PrioritySelectorNode id=\"20\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"21\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"174.0431
-    410.5914\" name=\"Shark\" description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"21\" />\r\n       
-    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode
-    id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"977.3781 554.4017\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
-    id=\"24\" />\r\n          <PrioritySelectorNode id=\"20\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"23\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"613.0944 395.8286\" name=\"Navigation/MoveToRandomPosition\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1033.716
+    221.7183\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <RepeatDecorator id=\"25\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
+    <SequenceNode id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1024.448 407.7614\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"1\" />\r\n         
+    <RepeatDecorator id=\"25\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <PrioritySelectorNode id=\"20\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"979.9065 616.8131\" name=\"Priority Selector\"
+    description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <PrioritySelectorNode id=\"20\" />\r\n          <SequenceNode
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
+    <ConditionEvalNode id=\"22\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"1059.725 999.9104\" name=\"MyConditions/Is Treasure
+    gone?\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"22\" />\r\n         
+    <PrioritySelectorNode id=\"20\" />\r\n        </data>\r\n      </_data>\r\n   
+    </ConditionEvalNode>\r\n    <SubbehaviorNode id=\"21\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"768.9042 828.4803\" name=\"Shark\"
+    description=\"\" cardinality=\"-1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <SubbehaviorNode id=\"21\" />\r\n        </data>\r\n     
+    </_data>\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode id=\"24\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1553.239
+    986.2908\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"24\" />\r\n         
+    <PrioritySelectorNode id=\"20\" />\r\n        </data>\r\n      </_data>\r\n   
+    </ConditionEvalNode>\r\n    <ActionNode id=\"23\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"1188.956 827.7175\" name=\"Navigation/MoveToRandomPosition\"
     description=\"Gets a random position from a given area and moves the game object
     to that point by using a NavMeshAgent\" cardinality=\"0\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"23\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.6
+  zoom: 1
   subslist:
   - {fileID: 11400000, guid: 4af2f63e0d275574ba35c01ef50ee462, type: 2}
   _guid: d5642ed214bef244886253c632291dca

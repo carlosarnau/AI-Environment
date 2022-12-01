@@ -1,10 +1,10 @@
 using UnityEngine;
- 
 using Pada1.BBCore;
 using Pada1.BBCore.Framework; 
 
 [Condition("MyActions/Rebut?")]
 [Help("Checks bool Valor.")]
+
 public class Rebut : ConditionBase
 {
     [InParam("game object")]

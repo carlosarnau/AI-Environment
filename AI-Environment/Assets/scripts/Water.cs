@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //  Start is called before the first frame update
     void Start()
-    {
-        
-    }
+    {}
+
     public bool fog;
     float fogDensity = 0.005f;
-    // Update is called once per frame
+
+    //  Update is called once per frame
     void Update()
     {
         if (fog == true) RenderSettings.fog = true;

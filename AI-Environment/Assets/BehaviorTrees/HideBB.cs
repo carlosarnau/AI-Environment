@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Pada1.BBCore;           // Code attributes
-using Pada1.BBCore.Tasks;     // TaskStatus
-using Pada1.BBCore.Framework; // BasePrimitiveAction
+using Pada1.BBCore;             // Code attributes
+using Pada1.BBCore.Tasks;       // TaskStatus
+using Pada1.BBCore.Framework;   // BasePrimitiveAction
 
 [Action("MyActions/Hide")]
 [Help("Get the Vector3 for hiding.")]
@@ -17,8 +17,8 @@ public class HideBB : BasePrimitiveAction
 
     public override TaskStatus OnUpdate()
     {
-        // Moves moves = targetGameobject.GetComponent<Moves>();
-        //hide = moves.HideValue();
+        //  Moves moves = targetGameobject.GetComponent<Moves>();
+        //  hide = moves.HideValue();
         return TaskStatus.COMPLETED;
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Target : MonoBehaviour
 {
     public bool Activat = false;
@@ -12,10 +11,8 @@ public class Target : MonoBehaviour
         Activat = true;
     }
 
-
     public void Rebre()
     {
         Debug.Log("Rebut!");
     }
-
 }

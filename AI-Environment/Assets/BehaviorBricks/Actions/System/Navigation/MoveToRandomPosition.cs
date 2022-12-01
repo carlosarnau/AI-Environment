@@ -37,6 +37,7 @@ namespace BBUnity.Actions
                 navAgent.Resume();
             #endif
         }
+
         /// <summary>Method of Update of MoveToRandomPosition </summary>
         /// <remarks>Check the status of the task, if it has traveled the road or is close to the goal it is completed
         /// and otherwise it will remain in operation.</remarks>
@@ -75,6 +76,7 @@ namespace BBUnity.Actions
                 }
             }
         }
+
         /// <summary>Abort method of MoveToRandomPosition </summary>
         /// <remarks>When the task is aborted, it stops the navAgentMesh.</remarks>
         public override void OnAbort()
