@@ -20,14 +20,14 @@ public class AIScripts : MonoBehaviour
     //  Functions
     bool seek = false;
     bool wander = false;
-    bool hide = false;
+    //bool hide = false;
     bool patrol = false;
-    bool flee = false;
+    //bool flee = false;
     
     //  Stats
     public float minDistance = 20.0f;
     float closeToTargetDistance = 7.0f;
-    float stopDistance = 1.0f;
+    //float stopDistance = 1.0f;
     float radius = 10.0f;
     float offset = 10.0f;
     public GameObject[] hidingSpots;
