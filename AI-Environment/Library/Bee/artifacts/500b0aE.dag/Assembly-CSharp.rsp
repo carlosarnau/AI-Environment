@@ -389,7 +389,9 @@
 "Assets/scripts/Flock.cs"
 "Assets/scripts/FlockManager.cs"
 "Assets/scripts/Formation.cs"
+"Assets/scripts/KingFish.cs"
 "Assets/scripts/Patrol.cs"
+"Assets/scripts/Slots.cs"
 "Assets/scripts/Water.cs"
 -langversion:9.0
 
