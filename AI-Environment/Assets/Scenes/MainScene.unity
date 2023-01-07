@@ -5273,7 +5273,6 @@ MonoBehaviour:
   - {fileID: 798079205}
   - {fileID: 1246569900}
   - {fileID: 1472349015}
-  - {fileID: 361739660}
   - {fileID: 1908194012}
   - {fileID: 2078011151}
   - {fileID: 642519880}
@@ -5291,11 +5290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ac7ff7a8a0a8b45a2e0cf4fe952cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fstRow: 5
+  fstRow: 10
   row01: {fileID: 7270908568002974486, guid: 484fd17a3b23d894b9900ee40cf213b2, type: 3}
-  sndRow: 5
+  sndRow: 10
   row02: {fileID: 7270908568002974486, guid: 484fd17a3b23d894b9900ee40cf213b2, type: 3}
-  trdrow: 5
+  trdrow: 10
   row03: {fileID: 7270908568002974486, guid: 484fd17a3b23d894b9900ee40cf213b2, type: 3}
   king: {fileID: 991568005}
 --- !u!1001 &995602842
