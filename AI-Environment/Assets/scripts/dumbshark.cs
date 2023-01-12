@@ -25,9 +25,9 @@ public class dumbshark : Agent
         }
         
         // Move the target to a new spot
-        Target.localPosition = new Vector3(Random.value * 8 - 4,
+        Target.localPosition = new Vector3(Random.Range(26,-23),
                                            0.5f,
-                                           Random.value * 8 - 4);
+                                           Random.Range(31,-38));
     }
     public override void CollectObservations(VectorSensor sensor)
     {
