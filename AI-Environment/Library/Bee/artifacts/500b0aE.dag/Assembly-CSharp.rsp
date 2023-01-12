@@ -481,6 +481,7 @@
 "Assets/ML-Agents/TestScenes/TestCompressedTexture/TestTextureSensor.cs"
 "Assets/ML-Agents/TestScenes/TestCompressedTexture/TestTextureSensorComponent.cs"
 "Assets/scripts/AIScripts.cs"
+"Assets/scripts/dumbshark.cs"
 "Assets/scripts/Flock.cs"
 "Assets/scripts/FlockManager.cs"
 "Assets/scripts/Patrol.cs"
