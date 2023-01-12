@@ -1,0 +1,47 @@
+{
+    "DumbShark": {
+        "checkpoints": [
+            {
+                "steps": 499988,
+                "file_path": "results\\DumbShark\\DumbShark\\DumbShark-499988.onnx",
+                "reward": null,
+                "creation_time": 1673559041.3748677,
+                "auxillary_file_paths": [
+                    "results\\DumbShark\\DumbShark\\DumbShark-499988.pt"
+                ]
+            },
+            {
+                "steps": 500051,
+                "file_path": "results\\DumbShark\\DumbShark\\DumbShark-500051.onnx",
+                "reward": 0.0,
+                "creation_time": 1673559041.4413795,
+                "auxillary_file_paths": [
+                    "results\\DumbShark\\DumbShark\\DumbShark-500051.pt"
+                ]
+            },
+            {
+                "steps": 500051,
+                "file_path": "results\\DumbShark\\DumbShark\\DumbShark-500051.onnx",
+                "reward": null,
+                "creation_time": 1673559186.1966207,
+                "auxillary_file_paths": [
+                    "results\\DumbShark\\DumbShark\\DumbShark-500051.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500051,
+            "file_path": "results\\DumbShark\\DumbShark.onnx",
+            "reward": null,
+            "creation_time": 1673559186.1966207,
+            "auxillary_file_paths": [
+                "results\\DumbShark\\DumbShark\\DumbShark-500051.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
