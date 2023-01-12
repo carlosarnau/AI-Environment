@@ -23,11 +23,19 @@ public class dumbshark : Agent
             this.rBody.velocity = Vector3.zero;
             this.transform.localPosition = new Vector3(0f, 2f, 0);
         }
-        
+        else if (this.transform.localPosition.x > 50 || this.transform.localPosition.x < -30 || this.transform.localPosition.z > 30 || this.transform.localPosition.z < -30)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0f, 2f, 0);
+        }
+
         // Move the target to a new spot
-        Target.localPosition = new Vector3(Random.Range(26,-23),
+        Target.localPosition = new Vector3(Random.Range(26, -23),
                                            0.5f,
-                                           Random.Range(31,-38));
+                                           Random.Range(31, -38));
+
+
     }
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -39,7 +47,7 @@ public class dumbshark : Agent
         sensor.AddObservation(rBody.velocity.x);
         sensor.AddObservation(rBody.velocity.z);
     }
-    public float forceMultiplier = 10;
+    public float forceMultiplier = 1;
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
         // Actions, size = 2
@@ -63,6 +71,7 @@ public class dumbshark : Agent
         {
             EndEpisode();
         }
+        else if (this.transform.localPosition.x > 50 || this.transform.localPosition.x < -30 || this.transform.localPosition.z > 30 || this.transform.localPosition.z < -30) EndEpisode();
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
