@@ -27,15 +27,33 @@
                 "auxillary_file_paths": [
                     "results\\DumbShark\\DumbShark\\DumbShark-500051.pt"
                 ]
+            },
+            {
+                "steps": 999956,
+                "file_path": "results\\DumbShark\\DumbShark\\DumbShark-999956.onnx",
+                "reward": null,
+                "creation_time": 1673566963.2538157,
+                "auxillary_file_paths": [
+                    "results\\DumbShark\\DumbShark\\DumbShark-999956.pt"
+                ]
+            },
+            {
+                "steps": 1123521,
+                "file_path": "results\\DumbShark\\DumbShark\\DumbShark-1123521.onnx",
+                "reward": 0.0,
+                "creation_time": 1673568873.8886452,
+                "auxillary_file_paths": [
+                    "results\\DumbShark\\DumbShark\\DumbShark-1123521.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 500051,
+            "steps": 1123521,
             "file_path": "results\\DumbShark\\DumbShark.onnx",
-            "reward": null,
-            "creation_time": 1673559186.1966207,
+            "reward": 0.0,
+            "creation_time": 1673568873.8886452,
             "auxillary_file_paths": [
-                "results\\DumbShark\\DumbShark\\DumbShark-500051.pt"
+                "results\\DumbShark\\DumbShark\\DumbShark-1123521.pt"
             ]
         }
     },
