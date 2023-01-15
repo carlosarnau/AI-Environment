@@ -387,6 +387,7 @@
 "Assets/BehaviorTrees/Shark.cs"
 "Assets/BehaviorTrees/Target.cs"
 "Assets/FSM/FSM.cs"
+"Assets/scr.cs"
 "Assets/scripts/AIScripts.cs"
 "Assets/scripts/Flock.cs"
 "Assets/scripts/FlockManager.cs"

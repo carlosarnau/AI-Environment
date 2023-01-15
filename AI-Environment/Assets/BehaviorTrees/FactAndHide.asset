@@ -42,31 +42,31 @@ MonoBehaviour:
     <SequenceNode id=\"4\" />\r\n          <RandomSelectorNode id=\"5\" />\r\n         
     <ActionNode id=\"7\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <SequenceNode id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"731.3125 43\" name=\"Sequence\" description=\"Executes all its children
-    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    position=\"359.0047 71.44801\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"1\" />\r\n        </data>\r\n     
     </_data>\r\n    </SequenceNode>\r\n    <RepeatUntilFailed id=\"2\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"675.3125
-    227\" name=\"Repeat Until Failed\" description=\"Repeats the execution of its
-    child node until it fails\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"303.0037
+    255.4484\" name=\"Repeat Until Failed\" description=\"Repeats the execution of
+    its child node until it fails\" cardinality=\"1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatUntilFailed id=\"2\" />\r\n         
     <SequenceNode id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatUntilFailed>\r\n   
     <SequenceNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"730.3125 403\" name=\"Sequence\" description=\"Executes all its children
-    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    position=\"358.0047 431.4482\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"4\" />\r\n         
     <RepeatUntilFailed id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
-    <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"531.4276 599.9996\" name=\"Cops/FindClosestCop\" description=\"Get
+    <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    position=\"159.1188 628.4503\" name=\"Cops/FindClosestCop\" description=\"Get
     the Closest Free Cop.\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"7\" />\r\n          <SequenceNode id=\"4\"
     />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <RandomSelectorNode
     id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"877.1424 599.9998\" name=\"Random Selector\" description=\"Selects
+    position=\"504.8362 628.4506\" name=\"Random Selector\" description=\"Selects
     randomly one of its children\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RandomSelectorNode id=\"5\" />\r\n         
     <SequenceNode id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </RandomSelectorNode>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.7
+  zoom: 1
   subslist: []
   _guid: a1c84d05c4cad644aa3c22f49df041a7
